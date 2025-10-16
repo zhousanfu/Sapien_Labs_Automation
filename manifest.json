@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Sapien Labs Automation v1 逻辑",
+    "version": "1.0.0",
+    "description": "Automate interactions on Sapien Labs 逻辑",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://app.sapien.io/t/tag?tagFlowNodeId=*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "48": "icon.png"
+    }
+  }
+  
